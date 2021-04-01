@@ -1,0 +1,79 @@
+**多人协作git使用流程（开发同模块）**
+git add .
+git commit -m ""
+git pull 
+git push 
+
+**合并代码操作**
+git checkout tby-web-test-98
+git pull origin tby-web-test-98
+git merge --no-ff -m "merge kom-web-test-7000 into kom-web-test-5000" kom-web-test-7000
+git push origin kom-web-test-5000
+
+// KOM/TCM  2套测试分支
+kom-web-test-7000
+kom-web-test-5000
+
+test
+
+// TBY  2套测试分支
+tby-web-test-98
+tby-web-test-998
+
+kom-full-code-pool
+tby-full-code-pool
+
+master
+tby-master
+
+
+如发生merge操作未提交想撤销可执行
+1.git reflog	一般第一行表示发生合并，第二行是合并之前的时间
+
+2.git reset --soft xxx    在合并之前强制这里的分支跟踪，并执行
+
+3.git push -f    强制推上去
+
+
+新建分支:
+git checkout -b master-hot
+git push --set-upstream origin master-hot
+
+
+
+git merge --abort使用情况
+    1.代码冲突太多且无法，已经无法回归到解决冲突之前的状态了，
+执行git merge --abort命令回到解决冲突之前的状态。再重新执行git pull操作。重新解决冲突， 注意看仔细了
+
+	
+git-stash
+*将未commit的文件暂存起来，执行一些以外的操作
+*git stash pop把未commit文件还原出来
+
+
+// 删除分支   
+git push --delete origin kom-dev-6.9
+or
+git branch -D xxx
+// 查看分支
+git branch -a
+
+
+// 移除某次commit
+git revert XXXXXXXXXXXXXXXXXX
+
+
+//把某次的提交转移到别的分支
+1.git log 分支名
+2.复制commitId
+3.切分支到所提交分支且拉最新代码
+4.git cherry-pick commitId
+5.如果有冲突，解决冲突之后 git add .     git cherry-pick --continue，最后push
+
+
+//git修改已commit的注释信息
+情况：commit后未push
+1.git commit --amend
+2.按键i可进入编辑模式
+3.修改注释信息，然后退出编辑模式(ZZ或者:wq 推出)
+4. push

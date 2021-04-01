@@ -1,0 +1,50 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": " NPM build",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run-script",
+                "build"
+            ],
+            "port": 9229
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Gulp task",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+            "args": [
+                "concat"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Current Node File Program",
+            "program": "${file}",
+             "env": {
+                "NODE_ENV":"development",
+                "NODE_ENV_CONFIG": "development",
+                "LANG":"en-us",
+                "DEBUG":"koa-views"
+             }
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach",
+            "port": 9229
+        }
+    ]
+}
