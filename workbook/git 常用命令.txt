@@ -5,9 +5,9 @@ git pull
 git push 
 
 **合并代码操作**
-git checkout '目标分支(如master)'
-git pull origin '目标分支(如master)'
-git merge --no-ff -m "merge ${待合并分支} into '目标分支(如master)'" ${待合并分支}
+git checkout master
+git pull origin master
+git merge --no-ff -m "merge test into master" test
 git push origin master
 
 // KOM/TCM  2套测试分支
