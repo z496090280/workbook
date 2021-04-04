@@ -1,22 +1,22 @@
-**¶àÈËĞ­×÷gitÊ¹ÓÃÁ÷³Ì£¨¿ª·¢Í¬Ä£¿é£©**
+**å¤šäººåä½œgitä½¿ç”¨æµç¨‹ï¼ˆå¼€å‘åŒæ¨¡å—ï¼‰**
 git add .
 git commit -m ""
 git pull 
 git push 
 
-**ºÏ²¢´úÂë²Ù×÷**
-git checkout tby-web-test-98
-git pull origin tby-web-test-98
-git merge --no-ff -m "merge kom-web-test-7000 into kom-web-test-5000" kom-web-test-7000
-git push origin kom-web-test-5000
+**åˆå¹¶ä»£ç æ“ä½œ**
+git checkout 'ç›®æ ‡åˆ†æ”¯(å¦‚master)'
+git pull origin 'ç›®æ ‡åˆ†æ”¯(å¦‚master)'
+git merge --no-ff -m "merge ${å¾…åˆå¹¶åˆ†æ”¯} into 'ç›®æ ‡åˆ†æ”¯(å¦‚master)'" ${å¾…åˆå¹¶åˆ†æ”¯}
+git push origin master
 
-// KOM/TCM  2Ì×²âÊÔ·ÖÖ§
+// KOM/TCM  2å¥—æµ‹è¯•åˆ†æ”¯
 kom-web-test-7000
 kom-web-test-5000
 
 test
 
-// TBY  2Ì×²âÊÔ·ÖÖ§
+// TBY  2å¥—æµ‹è¯•åˆ†æ”¯
 tby-web-test-98
 tby-web-test-998
 
@@ -27,53 +27,53 @@ master
 tby-master
 
 
-Èç·¢Éúmerge²Ù×÷Î´Ìá½»Ïë³·Ïú¿ÉÖ´ĞĞ
-1.git reflog	Ò»°ãµÚÒ»ĞĞ±íÊ¾·¢ÉúºÏ²¢£¬µÚ¶şĞĞÊÇºÏ²¢Ö®Ç°µÄÊ±¼ä
+å¦‚å‘ç”Ÿmergeæ“ä½œæœªæäº¤æƒ³æ’¤é”€å¯æ‰§è¡Œ
+1.git reflog	ä¸€èˆ¬ç¬¬ä¸€è¡Œè¡¨ç¤ºå‘ç”Ÿåˆå¹¶ï¼Œç¬¬äºŒè¡Œæ˜¯åˆå¹¶ä¹‹å‰çš„æ—¶é—´
 
-2.git reset --soft xxx    ÔÚºÏ²¢Ö®Ç°Ç¿ÖÆÕâÀïµÄ·ÖÖ§¸ú×Ù£¬²¢Ö´ĞĞ
+2.git reset --soft xxx    åœ¨åˆå¹¶ä¹‹å‰å¼ºåˆ¶è¿™é‡Œçš„åˆ†æ”¯è·Ÿè¸ªï¼Œå¹¶æ‰§è¡Œ
 
-3.git push -f    Ç¿ÖÆÍÆÉÏÈ¥
+3.git push -f    å¼ºåˆ¶æ¨ä¸Šå»
 
 
-ĞÂ½¨·ÖÖ§:
+æ–°å»ºåˆ†æ”¯:
 git checkout -b master-hot
 git push --set-upstream origin master-hot
 
 
 
-git merge --abortÊ¹ÓÃÇé¿ö
-    1.´úÂë³åÍ»Ì«¶àÇÒÎŞ·¨£¬ÒÑ¾­ÎŞ·¨»Ø¹éµ½½â¾ö³åÍ»Ö®Ç°µÄ×´Ì¬ÁË£¬
-Ö´ĞĞgit merge --abortÃüÁî»Øµ½½â¾ö³åÍ»Ö®Ç°µÄ×´Ì¬¡£ÔÙÖØĞÂÖ´ĞĞgit pull²Ù×÷¡£ÖØĞÂ½â¾ö³åÍ»£¬ ×¢Òâ¿´×ĞÏ¸ÁË
+git merge --abortä½¿ç”¨æƒ…å†µ
+    1.ä»£ç å†²çªå¤ªå¤šä¸”æ— æ³•ï¼Œå·²ç»æ— æ³•å›å½’åˆ°è§£å†³å†²çªä¹‹å‰çš„çŠ¶æ€äº†ï¼Œ
+æ‰§è¡Œgit merge --abortå‘½ä»¤å›åˆ°è§£å†³å†²çªä¹‹å‰çš„çŠ¶æ€ã€‚å†é‡æ–°æ‰§è¡Œgit pullæ“ä½œã€‚é‡æ–°è§£å†³å†²çªï¼Œ æ³¨æ„çœ‹ä»”ç»†äº†
 
 	
 git-stash
-*½«Î´commitµÄÎÄ¼şÔİ´æÆğÀ´£¬Ö´ĞĞÒ»Ğ©ÒÔÍâµÄ²Ù×÷
-*git stash pop°ÑÎ´commitÎÄ¼ş»¹Ô­³öÀ´
+*å°†æœªcommitçš„æ–‡ä»¶æš‚å­˜èµ·æ¥ï¼Œæ‰§è¡Œä¸€äº›ä»¥å¤–çš„æ“ä½œ
+*git stash popæŠŠæœªcommitæ–‡ä»¶è¿˜åŸå‡ºæ¥
 
 
-// É¾³ı·ÖÖ§   
+// åˆ é™¤åˆ†æ”¯   
 git push --delete origin kom-dev-6.9
 or
 git branch -D xxx
-// ²é¿´·ÖÖ§
+// æŸ¥çœ‹åˆ†æ”¯
 git branch -a
 
 
-// ÒÆ³ıÄ³´Îcommit
+// ç§»é™¤æŸæ¬¡commit
 git revert XXXXXXXXXXXXXXXXXX
 
 
-//°ÑÄ³´ÎµÄÌá½»×ªÒÆµ½±ğµÄ·ÖÖ§
-1.git log ·ÖÖ§Ãû
-2.¸´ÖÆcommitId
-3.ÇĞ·ÖÖ§µ½ËùÌá½»·ÖÖ§ÇÒÀ­×îĞÂ´úÂë
+//æŠŠæŸæ¬¡çš„æäº¤è½¬ç§»åˆ°åˆ«çš„åˆ†æ”¯
+1.git log åˆ†æ”¯å
+2.å¤åˆ¶commitId
+3.åˆ‡åˆ†æ”¯åˆ°æ‰€æäº¤åˆ†æ”¯ä¸”æ‹‰æœ€æ–°ä»£ç 
 4.git cherry-pick commitId
-5.Èç¹ûÓĞ³åÍ»£¬½â¾ö³åÍ»Ö®ºó git add .     git cherry-pick --continue£¬×îºópush
+5.å¦‚æœæœ‰å†²çªï¼Œè§£å†³å†²çªä¹‹å git add .     git cherry-pick --continueï¼Œæœ€åpush
 
 
-//gitĞŞ¸ÄÒÑcommitµÄ×¢ÊÍĞÅÏ¢
-Çé¿ö£ºcommitºóÎ´push
+//gitä¿®æ”¹å·²commitçš„æ³¨é‡Šä¿¡æ¯
+æƒ…å†µï¼šcommitåæœªpush
 1.git commit --amend
-2.°´¼üi¿É½øÈë±à¼­Ä£Ê½
-3.ĞŞ¸Ä×¢ÊÍĞÅÏ¢£¬È»ºóÍË³ö±à¼­Ä£Ê½(ZZ»òÕß:wq ÍÆ³ö)
+2.æŒ‰é”®iå¯è¿›å…¥ç¼–è¾‘æ¨¡å¼
+3.ä¿®æ”¹æ³¨é‡Šä¿¡æ¯ï¼Œç„¶åé€€å‡ºç¼–è¾‘æ¨¡å¼(ZZæˆ–è€…:wq æ¨å‡º)
 4. push
