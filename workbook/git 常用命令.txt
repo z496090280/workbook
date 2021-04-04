@@ -10,22 +10,6 @@ git pull origin master
 git merge --no-ff -m "merge test into master" test
 git push origin master
 
-// KOM/TCM  2套测试分支
-kom-web-test-7000
-kom-web-test-5000
-
-test
-
-// TBY  2套测试分支
-tby-web-test-98
-tby-web-test-998
-
-kom-full-code-pool
-tby-full-code-pool
-
-master
-tby-master
-
 
 如发生merge操作未提交想撤销可执行
 1.git reflog	一般第一行表示发生合并，第二行是合并之前的时间
